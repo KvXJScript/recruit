@@ -14,7 +14,6 @@ const Heading = ()=>{
 
     const dataStore = useRootStore()
 
-
     const handleEuroChange = (e: React.FormEvent<HTMLFormElement>): void=>{
         e.preventDefault()
         dataStore.exchange.setNewEuroValue(newEuroValue)
