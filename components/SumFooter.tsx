@@ -45,7 +45,7 @@ const SumFooter = ()=>{
             <Observer>
                 {() => (
                     <>
-                        {dataStore.exchange.euroSum  > 0 &&  <div>Sum: {(dataStore.exchange.euroSum * dataStore.exchange.euroValue).toFixed(2)} PLN ({dataStore.exchange.euroSum}EUR)</div>}
+                        {dataStore.exchange.euroSum  > 0 &&  <div>Sum: {(dataStore.exchange.euroSum * dataStore.exchange.euroValue).toFixed(2)} PLN ({dataStore.exchange.euroSum} EUR)</div>}
                     </>
                 )}
             </Observer>
