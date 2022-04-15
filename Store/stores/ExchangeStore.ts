@@ -14,7 +14,7 @@ export interface Item {
 
 export default class ExchangeStore {
     @observable current: Item[] = [];
-    @observable euroSum: number = 0;
+    @observable euroSum: number | undefined = 0;
     @observable euroValue = ExchangeRate.Euro
 
     constructor() {
@@ -30,6 +30,7 @@ export default class ExchangeStore {
     @action
     setNewEuroValue(value: number) {
         this.euroValue = value
+        this.clearItems()
     }
 
     @action
@@ -40,5 +41,11 @@ export default class ExchangeStore {
         newCurrent.splice(indexOfRemovedItem, 1)
         this.current = newCurrent
         this.euroSum = this.euroSum - item.amountEUR
+    }
+
+    @action
+    clearItems() {
+        this.current = []
+        this.euroSum = 0
     }
 }

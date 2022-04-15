@@ -1,6 +1,7 @@
 export enum FormId {
     Transaction = "titleOfTransaction",
     Amount = "Amount",
+    EuroAmm = "EuroAmm"
 }
 
 export enum FormDetails {

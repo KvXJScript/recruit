@@ -29,6 +29,12 @@ const FormElements = ()=>{
         e.preventDefault()
         setLifeCycle(LifeCycle.Submitting)
 
+        if(!transactionTitle || amount === 0){
+            toast("Please provide your title and amount ")
+            setLifeCycle(LifeCycle.Init)
+            return;
+        }
+
         const item: Item = {
             amountEUR: undefined,
             title: undefined,

@@ -28,12 +28,13 @@ const Heading = ()=>{
                 <h1 className="text-center pb-6 text-2xl font-bold">Change Conversion rate</h1>
                 <div className="flex justify-between items-center">
                 <form onSubmit={handleEuroChange} className="flex gap-x-4 items-center">
-                    <label htmlFor={FormId.Amount}> New Euro Value </label>
+                    <label htmlFor={FormId.EuroAmm}> New Euro Value </label>
                     <input type="number"
-                       className="border-2 border-gray-900 col-span-2 px-2 py-1"
-                       id={FormId.Amount}
-                       value={newEuroValue}
-                       onChange={((e)=> {
+                           className="border-2 border-gray-900 col-span-2 px-2 py-1"
+                           id={FormId.EuroAmm}
+                           autoFocus
+                           value={newEuroValue}
+                           onChange={((e)=> {
                            const target = hydrateType(e)
                            setNewEuroValue(Number(target.value))
                        })}/>
